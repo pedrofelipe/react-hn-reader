@@ -1,5 +1,8 @@
 ## Hacker News Reader
 
+## Demo
+You'll find a demo hosted on Heroku: [nl-hn-reader.herokuapp.com](https://nl-hn-reader.herokuapp.com)
+
 ## Running
 ### `npm start`
 
