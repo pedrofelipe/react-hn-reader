@@ -1,0 +1,41 @@
+@import '../../css/colors.css';
+
+.app-header {
+  padding: 1.5rem 0;
+  background-color: var(--orange);
+}
+
+.app-header-logo {
+  padding: 3px 0.625rem;
+  margin-right: 0.625rem;
+  line-height: 1;
+  border: 1px solid var(--white);
+}
+
+.app-header-title {
+  color: var(--white);
+}
+
+.app-footer {
+  padding: 1rem 0;
+}
+
+.app-footer a {
+  font-weight: 500;
+  color: var(--orange);
+}
+
+.app-footer a:hover,
+.app-footer a:focus {
+  color: var(--orange-2);
+}
+
+@media screen and (max-width: 767px) {
+  .app-header {
+    padding: 0.75rem 0;
+  }
+
+  .app-footer {
+    padding: 0.625rem 0;
+  }
+}
