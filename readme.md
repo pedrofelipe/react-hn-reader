@@ -41,3 +41,10 @@ hn-reader/
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
 * [ESLint](http://eslint.org)
 * [Jest](http://facebook.github.io/jest)
+
+## Features
+- [x] Top Stories List
+- [ ] New, Best, Ask, Show and Job Stories lists
+- [ ] Single Story
+- [ ] Show 1st Level Comments
+- [ ] Show Child Comments
