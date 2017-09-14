@@ -1,3 +1,8 @@
+/* Placeholder */
+.placeholder-list {
+  padding: 1rem 0;
+}
+
 /* List */
 .stories-list {
   padding: 1.5rem 0;
@@ -65,6 +70,11 @@
 }
 
 @media screen and (max-width: 767px) {
+  /* Placeholder */
+  .placeholder-list {
+    padding: 0.3125rem 0;
+  }
+
   /* List */
   .stories-list {
     padding: 0.625rem 0;

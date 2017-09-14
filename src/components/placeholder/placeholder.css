@@ -1,0 +1,43 @@
+@keyframes placeholder-animation {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+.placeholder {
+  width: 85%;
+  margin: 0.9375rem 0;
+  padding-bottom: 0.9375rem;
+  border-bottom: 1px solid rgba(67, 50, 42, .05);
+}
+
+.placeholder-background {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: inherit;
+  animation: placeholder-animation 1s linear infinite;
+  background: linear-gradient(to right, rgba(255, 133, 27, .1) 0%, rgba(251, 101, 3, .15) 50%, rgba(255, 80, 27, .1) 100%);
+  will-change: transform;
+}
+
+.placeholder-text {
+  display: flex;
+  position: relative;
+  margin-bottom: 0.75rem;
+  width: 90%;
+  height: 1rem;
+  background-color: var(--yellow-2);
+  overflow: hidden;
+}
+
+.placeholder-text:last-of-type {
+  margin-bottom: 0;
+  width: 70%;
+}

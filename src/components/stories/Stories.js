@@ -1,7 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { client } from '../../index';
-import { slice } from 'ramda'
+import { slice, repeat } from 'ramda'
 import parseDomain from 'parse-domain'
+
+import { Placeholder } from '../index'
 
 import 'bulma/css/bulma.css';
 import './stories.css';
@@ -44,7 +46,9 @@ class Stories extends Component {
 
   renderLoading() {
     return (
-      <p>Loading...</p>
+      <div className="placeholder-list">
+        { repeat(<Placeholder />, 10) }
+      </div>
     )
   }
 
