@@ -1,5 +1,8 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+/* Dependencies */
+@import '~normalize.css/normalize.css';
+@import '~bulma/css/bulma.css';
+
+/* Global CSS files */
+@import 'css/colors.css';
+@import 'css/base.css';
+@import 'css/layout.css';
