@@ -18,8 +18,6 @@ export default function (state = initialState, action) {
         isLoading: true
       }
     case REQUEST_STORY_COMMENTS_SUCCESS:
-      console.log(action)
-      const currentList = state.list[action.storyId] || []
       return {
         ...state,
         list: [

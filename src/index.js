@@ -11,15 +11,13 @@ import axiosMiddleware from 'redux-axios-middleware'
 import createHistory from 'history/createBrowserHistory'
 import { Route } from 'react-router'
 
-import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
+import { ConnectedRouter } from 'react-router-redux'
 
 import reducers from './reducers'
 
 import './index.css'
 
 import { StoriesBoard, SingleStory } from './containers'
-
-import { Story } from './components'
 
 export const client = axios.create({
   baseURL: 'https://hacker-news.firebaseio.com/v0',
@@ -29,8 +27,6 @@ export const client = axios.create({
 const history = createHistory()
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-
-const middlewares = [applyMiddleware(logger), applyMiddleware(axiosMiddleware(client))]
 
 const store = createStore(
   reducers,

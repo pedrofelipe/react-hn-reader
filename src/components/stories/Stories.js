@@ -30,8 +30,6 @@ class Stories extends Component {
   }
 
   componentWillMount() {
-    const { match } = this.props
-
     let route = 'topstories.json'
 
     if(mapToApiEndpoint[this.getUrlPath()]) {
