@@ -1,7 +1,8 @@
 import {
   REQUEST_STORY_START,
   REQUEST_STORY_SUCCESS,
-  REQUEST_STORY_FAILURE
+  REQUEST_STORY_FAILURE,
+  LOCATION_CHANGED
 } from '../constants'
 
 const initialState = {
@@ -25,6 +26,7 @@ export default function (state = initialState, action) {
           ...state.list,
           action.payload.data
         ],
+        open: action.payload.data,
         isLoading: false
       }
     case REQUEST_STORY_FAILURE:
@@ -32,6 +34,11 @@ export default function (state = initialState, action) {
         ...state,
         isLoading: false,
         hasFailed: true
+      }
+    case LOCATION_CHANGED:
+      return {
+        ...state,
+        list: [],
       }
     default:
       return state

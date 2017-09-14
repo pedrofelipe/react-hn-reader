@@ -8,17 +8,34 @@ import { Placeholder } from '../index'
 
 import './stories.css'
 
+const mapToApiEndpoint = {
+  top: 'topstories.json',
+  new: 'newstories.json',
+  best: 'beststories.json',
+  ask: 'askstories.json',
+  jobs: 'jobstories.json'
+}
+
 class Stories extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      isFetching: true
+      isFetching: true,
+      endpoint: 'topstories'
     }
   }
 
   componentWillMount() {
-    client.get('topstories.json')
+    const { match } = this.props
+
+    let route = 'topstories.json'
+
+    if(mapToApiEndpoint[this.getUrlPath()]) {
+      route = mapToApiEndpoint[this.getUrlPath()]
+    }
+
+    client.get(route)
       .then((response) => {
         const { data } = response
         const { fetchStory } = this.props
@@ -36,6 +53,14 @@ class Stories extends Component {
     if((!prevProps.story.isLoading && !story.isLoading) && isFetching) {
       this.setState({isFetching: false})
     }
+  }
+
+  getUrlPath() {
+    const { match: { path } } = this.props
+
+    const paths = path.split('/').filter((p) => p)
+
+    return paths[0]
   }
 
   getDomain(url) {

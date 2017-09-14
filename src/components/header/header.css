@@ -14,6 +14,34 @@
   color: var(--white);
 }
 
+.header-nav {
+  padding: 0;
+  background-color: var(--orange-2);
+}
+
+.header-nav-list {
+
+}
+
+.header-nav-item {
+  display: inline-flex;
+}
+
+.header-nav-url {
+  padding: 0.625rem 0.9375rem;
+  color: var(--white);
+}
+
+.header-nav-url-active {
+  background-color: var(--orange);
+}
+
+.header-nav-url:hover,
+.header-nav-url:focus {
+  color: var(--white);
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 767px) {
   .app-header {
     padding: 0.875rem 0;
