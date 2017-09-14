@@ -6,7 +6,6 @@ import moment from 'moment'
 
 import { Placeholder } from '../index'
 
-import 'bulma/css/bulma.css'
 import './stories.css'
 
 class Stories extends Component {

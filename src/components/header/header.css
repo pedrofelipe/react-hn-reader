@@ -1,0 +1,21 @@
+.header {
+  padding: 1.5rem 0;
+  background-color: var(--orange);
+}
+
+.header-logo {
+  padding: 3px 0.625rem;
+  margin-right: 0.625rem;
+  line-height: 1;
+  border: 1px solid var(--white);
+}
+
+.header-title {
+  color: var(--white);
+}
+
+@media screen and (max-width: 767px) {
+  .app-header {
+    padding: 0.875rem 0;
+  }
+}

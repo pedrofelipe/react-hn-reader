@@ -4,33 +4,17 @@ import { connect } from 'react-redux'
 
 import * as actions from '../../actions/story'
 
-import { Stories } from '../../components'
-
-import 'bulma/css/bulma.css'
-import './app.css'
+import { Header, Footer, Stories } from '../../components'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <header className="section app-header">
-          <div className="container">
-            <h1 className="title is-4 app-header-title">
-              <span className="app-header-logo">Y</span>
-              Hacker News Reader
-            </h1>
-          </div>
-        </header>
+        <Header />
 
         <Stories {...this.props} />
 
-        <footer className="footer app-footer">
-          <div className="container">
-            <div className="content has-text-centered">
-              <p><strong>Hacker News Reader</strong> by <a href="https://pedrofelipe.com.br">Pedro Felipe</a></p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     )
   }

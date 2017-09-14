@@ -1,0 +1,24 @@
+.footer {
+  padding: 1rem 0;
+}
+
+.footer p,
+.footer strong {
+  color: var(--brown);
+}
+
+.footer a {
+  font-weight: 500;
+  color: var(--orange);
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: var(--orange-2);
+}
+
+@media screen and (max-width: 767px) {
+  .app-footer {
+    padding: 0.875rem 0;
+  }
+}

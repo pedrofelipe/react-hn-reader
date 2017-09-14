@@ -1,2 +1,5 @@
+export { default as Header } from './header/Header'
+export { default as Footer } from './footer/Footer'
 export { default as Placeholder } from './placeholder/Placeholder'
 export { default as Stories } from './stories/Stories'
+export { default as Story } from './story/Story'
