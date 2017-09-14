@@ -89,4 +89,8 @@
   .stories-tag-group {
     margin-top: 0.75rem;
   }
+
+  .stories-tag-group-author {
+    display: none;
+  }
 }

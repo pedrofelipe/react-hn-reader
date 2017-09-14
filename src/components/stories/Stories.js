@@ -84,7 +84,7 @@ class Stories extends Component {
               }
 
               {s.by &&
-                <span className="tags has-addons stories-tag-group">
+                <span className="tags has-addons stories-tag-group stories-tag-group-author">
                   <span className="tag is-dark stories-tag">author</span>
                   <span className="tag is-light stories-tag">{s.by}</span>
                 </span>
