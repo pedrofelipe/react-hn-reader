@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
-import * as actions from '../../actions/story';
+import * as actions from '../../actions/story'
 
 import { Stories } from '../../components'
 
-import 'bulma/css/bulma.css';
-import './app.css';
+import 'bulma/css/bulma.css'
+import './app.css'
 
 class App extends Component {
   render() {
@@ -32,11 +32,11 @@ class App extends Component {
           </div>
         </footer>
       </div>
-    );
+    )
   }
 }
 
-const mapStateToProps = (state) => state;
-const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch);
+const mapStateToProps = (state) => state
+const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App)

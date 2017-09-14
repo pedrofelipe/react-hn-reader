@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { client } from '../../index';
+import React, { Component } from 'react'
+import { client } from '../../index'
 import { slice, repeat } from 'ramda'
 import parseDomain from 'parse-domain'
 
 import { Placeholder } from '../index'
 
-import 'bulma/css/bulma.css';
-import './stories.css';
+import 'bulma/css/bulma.css'
+import './stories.css'
 
 class Stories extends Component {
   constructor(props) {
@@ -97,7 +97,7 @@ class Stories extends Component {
           </li>
         ))}
       </ul>
-    );
+    )
   }
 
   render() {
@@ -111,8 +111,8 @@ class Stories extends Component {
           : this.renderArticles()
         }
       </section>
-    );
+    )
   }
 }
 
-export default Stories;
+export default Stories

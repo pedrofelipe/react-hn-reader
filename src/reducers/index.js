@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 
-import storyReducer from './story';
+import storyReducer from './story'
 
 export default combineReducers({
   story: storyReducer
-});
+})

@@ -34,6 +34,6 @@ export default function (state = initialState, action) {
         hasFailed: true
       }
     default:
-      return state;
+      return state
   }
 }

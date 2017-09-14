@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import 'bulma/css/bulma.css';
-import './placeholder.css';
+import 'bulma/css/bulma.css'
+import './placeholder.css'
 
 class Placeholder extends Component {
   render() {
@@ -15,8 +15,8 @@ class Placeholder extends Component {
           <span className="placeholder-background"></span>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Placeholder;
+export default Placeholder
