@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
 import { client } from '../../index'
 import { slice, repeat } from 'ramda'
+
 import parseDomain from 'parse-domain'
 import moment from 'moment'
-import { Link } from 'react-router-dom'
 
 import { Placeholder } from '../index'
 

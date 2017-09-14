@@ -1,11 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer';
 
-import Footer from './Footer'
+import Placeholder from './Placeholder'
 
-test('Footer renders correctly', () => {
+test('Placeholder renders correctly', () => {
   const tree = renderer.create(
-    <Footer />
+    <Placeholder />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });

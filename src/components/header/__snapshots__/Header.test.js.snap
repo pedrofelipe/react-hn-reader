@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header>
+  <div
+    className="section header"
+  >
+    <div
+      className="container"
+    >
+      <h1
+        className="title is-4 header-title"
+      >
+        <span
+          className="header-logo"
+        >
+          Y
+        </span>
+        Hacker News Reader
+      </h1>
+    </div>
+  </div>
+  <nav
+    className="section header-nav"
+  >
+    <div
+      className="container"
+    >
+      <ul
+        className="header-nav-list"
+      >
+        <li
+          className="header-nav-item"
+        >
+          <a
+            aria-current="true"
+            className="header-nav-url header-nav-url-active"
+            href="/"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            top
+          </a>
+        </li>
+        <li
+          className="header-nav-item"
+        >
+          <a
+            aria-current={false}
+            className="header-nav-url"
+            href="new"
+            onClick={[Function]}
+            style={undefined}
+          >
+            newest
+          </a>
+        </li>
+        <li
+          className="header-nav-item"
+        >
+          <a
+            aria-current={false}
+            className="header-nav-url"
+            href="best"
+            onClick={[Function]}
+            style={undefined}
+          >
+            best
+          </a>
+        </li>
+        <li
+          className="header-nav-item"
+        >
+          <a
+            aria-current={false}
+            className="header-nav-url"
+            href="ask"
+            onClick={[Function]}
+            style={undefined}
+          >
+            ask
+          </a>
+        </li>
+        <li
+          className="header-nav-item"
+        >
+          <a
+            aria-current={false}
+            className="header-nav-url"
+            href="show"
+            onClick={[Function]}
+            style={undefined}
+          >
+            show
+          </a>
+        </li>
+        <li
+          className="header-nav-item"
+        >
+          <a
+            aria-current={false}
+            className="header-nav-url"
+            href="jobs"
+            onClick={[Function]}
+            style={undefined}
+          >
+            jobs
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+`;

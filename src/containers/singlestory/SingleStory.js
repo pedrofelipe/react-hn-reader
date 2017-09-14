@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import * as actions from '../../actions/story'
+import * as storyActions from '../../actions/story'
+import * as storyCommentsActions from '../../actions/storycomments'
 
 import { Header, Footer, Story } from '../../components'
 
-class SingleStory extends Component {
+export class SingleStory extends Component {
   render() {
     return (
       <div>
@@ -21,6 +22,6 @@ class SingleStory extends Component {
 }
 
 const mapStateToProps = (state) => state
-const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch)
+const mapDispatchToProps = (dispatch) => bindActionCreators({...storyActions, ...storyCommentsActions}, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(SingleStory)

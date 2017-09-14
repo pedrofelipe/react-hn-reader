@@ -6,7 +6,7 @@ import * as actions from '../../actions/story'
 
 import { Header, Footer, Stories } from '../../components'
 
-class StoriesBoard extends Component {
+export class StoriesBoard extends Component {
   render() {
     return (
       <div>

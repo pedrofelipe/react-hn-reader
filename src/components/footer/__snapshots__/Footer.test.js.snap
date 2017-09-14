@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  className="footer footer"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="content has-text-centered"
+    >
+      <p>
+        <strong>
+          Hacker News Reader
+        </strong>
+         by 
+        <a
+          href="https://pedrofelipe.com.br"
+        >
+          Pedro Felipe
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+`;
