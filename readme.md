@@ -1,4 +1,4 @@
-## Hacker News Reader
+# Hacker News Reader [![Build Status](https://travis-ci.org/PedroFelipe/hn-reader.svg?branch=master)](https://travis-ci.org/PedroFelipe/hn-reader)
 
 ![Hacker News Reader](screenshot.png)
 
