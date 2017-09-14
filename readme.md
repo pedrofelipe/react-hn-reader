@@ -1,4 +1,5 @@
 ## Hacker News Reader
+Hacker News Reader is a challenge built in 48h. It consumes [HackerNews/API](https://github.com/HackerNews/API) to create a simple and beautiful interface that provides a nice experience focused on mobile reading.
 
 ## Demo
 You'll find a demo hosted on Heroku: [nl-hn-reader.herokuapp.com](https://nl-hn-reader.herokuapp.com)
