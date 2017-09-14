@@ -28,13 +28,16 @@ hn-reader/
   public/
     index.html
     favicon.ico
+    manifest.json
   src/
-    App.css
-    App.js
-    App.test.js
+    actions/
+    components/
+    constants/
+    containers/
+    css/
+    reducers/
     index.css
     index.js
-    logo.svg
 ```
 
 ## What’s Inside?
