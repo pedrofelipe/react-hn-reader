@@ -70,21 +70,21 @@ class Stories extends Component {
               {s.score &&
                 <span className="tags has-addons stories-tag-group">
                   <span className="tag is-dark stories-tag">score</span>
-                  <span className="tag is-warning stories-tag">{s.score}</span>
+                  <span className="tag is-light stories-tag">{s.score}</span>
                 </span>
               }
 
               {s.by &&
                 <span className="tags has-addons stories-tag-group">
                   <span className="tag is-dark stories-tag">author</span>
-                  <span className="tag is-warning stories-tag">{s.by}</span>
+                  <span className="tag is-light stories-tag">{s.by}</span>
                 </span>
               }
 
               {s.descendants &&
                 <span className="tags has-addons stories-tag-group">
                   <span className="tag is-dark stories-tag">comments</span>
-                  <span className="tag is-warning stories-tag">
+                  <span className="tag is-light stories-tag">
                     {s.descendants}
                   </span>
                 </span>
