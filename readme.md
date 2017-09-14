@@ -55,7 +55,7 @@ hn-reader/
 
 ## Features
 - [x] Top Stories List
-- [ ] New, Best, Ask, Show and Job Stories lists
-- [ ] Single Story
+- [x] New, Best, Ask, Show and Job Stories lists
+- [x] Single Story
 - [ ] Show 1st Level Comments
 - [ ] Show Child Comments
