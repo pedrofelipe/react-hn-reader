@@ -20,6 +20,11 @@
   padding: 1rem 0;
 }
 
+.app-footer p,
+.app-footer strong {
+  color: var(--brown);
+}
+
 .app-footer a {
   font-weight: 500;
   color: var(--orange);
