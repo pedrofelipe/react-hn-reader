@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { client } from '../../index'
 import { slice, repeat } from 'ramda'
 import parseDomain from 'parse-domain'
+import moment from 'moment'
 
 import { Placeholder } from '../index'
 
@@ -44,6 +45,10 @@ class Stories extends Component {
     return `${d.domain}.${d.tld}`
   }
 
+  getRelativeTime(timestamp) {
+    return moment.unix(timestamp).fromNow()
+  }
+
   renderLoading() {
     return (
       <div className="placeholder-list">
@@ -73,7 +78,7 @@ class Stories extends Component {
             <div>
               {s.score &&
                 <span className="tags has-addons stories-tag-group">
-                  <span className="tag is-dark stories-tag">score</span>
+                  <span className="tag is-dark stories-tag">points</span>
                   <span className="tag is-light stories-tag">{s.score}</span>
                 </span>
               }
@@ -82,6 +87,13 @@ class Stories extends Component {
                 <span className="tags has-addons stories-tag-group">
                   <span className="tag is-dark stories-tag">author</span>
                   <span className="tag is-light stories-tag">{s.by}</span>
+                </span>
+              }
+
+              {s.time &&
+                <span className="tags has-addons stories-tag-group">
+                  <span className="tag is-dark stories-tag">when</span>
+                  <span className="tag is-light stories-tag">{this.getRelativeTime(s.time)}</span>
                 </span>
               }
 
@@ -101,7 +113,6 @@ class Stories extends Component {
   }
 
   render() {
-    const { story } = this.props
     const { isFetching } = this.state
 
     return (
