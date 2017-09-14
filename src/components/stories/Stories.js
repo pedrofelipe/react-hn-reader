@@ -3,6 +3,7 @@ import { client } from '../../index'
 import { slice, repeat } from 'ramda'
 import parseDomain from 'parse-domain'
 import moment from 'moment'
+import { Link } from 'react-router-dom'
 
 import { Placeholder } from '../index'
 
@@ -89,7 +90,7 @@ class Stories extends Component {
       <ul className="stories-list">
         {stories.map((s, key) => (
           <li className="stories-item" key={key}>
-            <a href={s.url} className="stories-url">
+            <Link to={`/item/${s.id}`} className="stories-url">
               {s.title}
 
               {s.url &&
@@ -97,7 +98,7 @@ class Stories extends Component {
                   {this.getDomain(s.url)}
                 </span>
               }
-            </a>
+            </Link>
 
             <div>
               {s.score &&

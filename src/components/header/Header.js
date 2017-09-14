@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import './header.css'
 
@@ -21,22 +21,22 @@ class Header extends Component {
           <div className="container">
             <ul className="header-nav-list">
               <li className="header-nav-item">
-                <Link to="/" className="header-nav-url" activeClassName="header-nav-url-active">top</Link>
+                <NavLink to="/" className="header-nav-url" activeClassName="header-nav-url-active">top</NavLink>
               </li>
               <li className="header-nav-item">
-                <Link to="new" className="header-nav-url" activeClassName="header-nav-url-active">newest</Link>
+                <NavLink to="new" className="header-nav-url" activeClassName="header-nav-url-active">newest</NavLink>
               </li>
               <li className="header-nav-item">
-                <Link to="best" className="header-nav-url" activeClassName="header-nav-url-active">best</Link>
+                <NavLink to="best" className="header-nav-url" activeClassName="header-nav-url-active">best</NavLink>
               </li>
               <li className="header-nav-item">
-                <Link to="ask" className="header-nav-url" activeClassName="header-nav-url-active">ask</Link>
+                <NavLink to="ask" className="header-nav-url" activeClassName="header-nav-url-active">ask</NavLink>
               </li>
               <li className="header-nav-item">
-                <Link to="show" className="header-nav-url" activeClassName="header-nav-url-active">show</Link>
+                <NavLink to="show" className="header-nav-url" activeClassName="header-nav-url-active">show</NavLink>
               </li>
               <li className="header-nav-item">
-                <Link to="jobs" className="header-nav-url" activeClassName="header-nav-url-active">jobs</Link>
+                <NavLink to="jobs" className="header-nav-url" activeClassName="header-nav-url-active">jobs</NavLink>
               </li>
             </ul>
           </div>

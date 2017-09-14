@@ -28,7 +28,8 @@
 }
 
 .header-nav-url {
-  padding: 0.625rem 0.9375rem;
+  padding: 0.75rem 0.9375rem;
+  line-height: 1;
   color: var(--white);
 }
 
