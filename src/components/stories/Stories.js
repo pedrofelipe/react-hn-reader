@@ -113,13 +113,6 @@ class Stories extends Component {
                   tagValue={relativeTime(s.time)}
                 />
               }
-
-              {s.descendants &&
-                <Tag
-                  tagName="comments"
-                  tagValue={s.descendants}
-                />
-              }
             </div>
           </li>
         ))}

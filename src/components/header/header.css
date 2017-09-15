@@ -20,7 +20,15 @@
 }
 
 .header-nav-list {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
 
+.header-nav-list::-webkit-scrollbar {
+  display: none;
 }
 
 .header-nav-item {

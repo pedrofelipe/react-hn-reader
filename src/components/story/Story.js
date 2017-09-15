@@ -99,27 +99,29 @@ class Story extends Component {
           </div>
         </section>
 
-        <section className="section story">
-          <h2 className="is-size-6 has-text-weight-semibold">
-            {s.descendants} {s.descendants <= 1 ? 'Comment' : 'Comments'}
-          </h2>
+        {s.descendants && s.descendants !== 0 &&
+          <section className="section story">
+            <h2 className="is-size-6 has-text-weight-semibold">
+              {s.descendants} {s.descendants <= 1 ? 'Comment' : 'Comments'}
+            </h2>
 
-          <hr />
+            <hr />
 
-          {comments && comments.map((c, key) => (
-            c.by && c.time &&
-              <div className="media story-comment">
-                <div className="media-content">
-                  <p className="story-comment-name">
-                    <strong>{c.by}</strong>
-                    <span className="tag is-rounded">{relativeTime(c.time)}</span>
-                  </p>
+            {comments && comments.map((c, key) => (
+              c.by && c.time &&
+                <div className="media story-comment">
+                  <div className="media-content">
+                    <p className="story-comment-name">
+                      <strong>{c.by}</strong>
+                      <span className="tag is-rounded">{relativeTime(c.time)}</span>
+                    </p>
 
-                  <p dangerouslySetInnerHTML={this.createStoryMarkup(c.text)} className="story-comment-text"></p>
+                    <p dangerouslySetInnerHTML={this.createStoryMarkup(c.text)} className="story-comment-text"></p>
+                  </div>
                 </div>
-              </div>
-          ))}
-        </section>
+            ))}
+          </section>
+        }
       </div>
     )
   }
