@@ -1,5 +1,7 @@
 import moment from 'moment'
 
-export const relativeTime = (timestamp) => {
+function relativeTime(timestamp) {
   return moment.unix(timestamp).fromNow()
 }
+
+export default relativeTime

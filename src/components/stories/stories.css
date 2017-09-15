@@ -22,9 +22,12 @@
 }
 
 .stories-item-url {
-  margin-right: 0.5rem;
   font-weight: 500;
   color: var(--orange);
+}
+
+.stories-item-url .tag {
+  margin-left: 0.5rem;
 }
 
 .stories-item-url:hover,

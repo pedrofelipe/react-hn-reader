@@ -38,6 +38,7 @@ hn-reader/
     constants/
     containers/
     css/
+    decorators/
     reducers/
     index.css
     index.js
@@ -57,5 +58,10 @@ hn-reader/
 - [x] Top Stories List
 - [x] New, Best, Ask, Show and Job Stories lists
 - [x] Single Story
-- [ ] Show 1st Level Comments
+- [x] Show 1st Level Comments
+
+## TO-DO
 - [ ] Show Child Comments
+- [ ] Improve Placeholder Animation
+- [ ] Cache Stories
+- [ ] Pagination

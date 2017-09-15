@@ -31,10 +31,9 @@ class Story extends Component {
   }
 
   render() {
-    const { story: { open } } = this.props
+    const { story: { open }, comments: { list } } = this.props
     const s = open
-
-    console.log(s)
+    const comments = list
 
     return (
       <div className="container">
@@ -43,7 +42,7 @@ class Story extends Component {
             <a href={s.url} target="_blank">
               {s.url && s.url.length > 0 &&
                 <Tag
-                  tagValue={s.url}
+                  tagValue={getDomain(s.url)}
                   tagSingle="true"
                 />
               }
@@ -69,14 +68,7 @@ class Story extends Component {
               {s.time &&
                 <Tag
                   tagName="when"
-                  tagValue={s.time}
-                />
-              }
-
-              {s.descendants &&
-                <Tag
-                  tagName="comments"
-                  tagValue={s.descendants}
+                  tagValue={relativeTime(s.time)}
                 />
               }
             </div>
@@ -86,7 +78,24 @@ class Story extends Component {
         </section>
 
         <section className="section story">
-          <h2 className="is-size-6 has-text-weight-semibold">Comments</h2>
+          <h2 className="is-size-6 has-text-weight-semibold">
+            {s.descendants} {s.descendants <= 1 ? 'Comment' : 'Comments'}
+          </h2>
+
+          <hr />
+
+          {comments && comments.map((c, key) => (
+            <div className="media story-comment">
+              <div className="media-content">
+                <p className="story-comment-name">
+                  <strong>{c.by}</strong>
+                  <span className="tag is-rounded">{relativeTime(c.time)}</span>
+                </p>
+
+                <p dangerouslySetInnerHTML={this.createStoryMarkup(c.text)} className="story-comment-text"></p>
+              </div>
+            </div>
+          ))}
         </section>
       </div>
     )

@@ -85,7 +85,7 @@ class Stories extends Component {
 
               {s.url &&
                 <Tag
-                  tagValue={s.url}
+                  tagValue={getDomain(s.url)}
                   tagSingle="true"
                 />
               }
@@ -110,7 +110,7 @@ class Stories extends Component {
               {s.time &&
                 <Tag
                   tagName="when"
-                  tagValue={s.time}
+                  tagValue={relativeTime(s.time)}
                 />
               }
 
