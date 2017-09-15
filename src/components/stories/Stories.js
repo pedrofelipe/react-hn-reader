@@ -72,7 +72,7 @@ class Stories extends Component {
     )
   }
 
-  renderArticles() {
+  renderStories() {
     const { story } = this.props
     const stories = story.list
 
@@ -134,7 +134,7 @@ class Stories extends Component {
       <section className="container">
         { isFetching
           ? this.renderLoading()
-          : this.renderArticles()
+          : this.renderStories()
         }
       </section>
     )

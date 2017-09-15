@@ -23,3 +23,12 @@ h1.story-title:not(:first-child) {
 .story-comment .story-comment-text {
   font-size: 0.875rem;
 }
+
+.story-comment-text a {
+  color: var(--orange);
+}
+
+.story-comment-text a:hover,
+.story-comment-text a:focus {
+  color: var(--orange-2);
+}

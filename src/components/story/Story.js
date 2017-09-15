@@ -4,19 +4,33 @@ import { isEmpty } from 'ramda';
 
 import { getDomain, relativeTime } from '../../decorators/index'
 
+import { Placeholder } from '../index'
 import { Tag } from '../index'
 
 import './story.css'
 
 class Story extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      isFetching: true
+    }
+  }
+
   componentWillMount() {
     const { fetchStory, match } = this.props
 
     fetchStory(match.params.storyId)
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     const { fetchStoryComments, story } = this.props
+    const { isFetching } = prevState
+
+    if((!prevProps.story.isLoading && !story.isLoading) && isFetching) {
+      this.setState({isFetching: false})
+    }
 
     if (isEmpty(prevProps.story.open) && !isEmpty(story.open)) {
       story.open.kids && story.open.kids.length > 0 &&
@@ -30,7 +44,15 @@ class Story extends Component {
     return { __html: content };
   }
 
-  render() {
+  renderLoading() {
+    return (
+      <div className="placeholder-list">
+        <Placeholder />
+      </div>
+    )
+  }
+
+  renderStory() {
     const { story: { open }, comments: { list } } = this.props
     const s = open
     const comments = list
@@ -85,19 +107,33 @@ class Story extends Component {
           <hr />
 
           {comments && comments.map((c, key) => (
-            <div className="media story-comment">
-              <div className="media-content">
-                <p className="story-comment-name">
-                  <strong>{c.by}</strong>
-                  <span className="tag is-rounded">{relativeTime(c.time)}</span>
-                </p>
+            c.by && c.time &&
+              <div className="media story-comment">
+                <div className="media-content">
+                  <p className="story-comment-name">
+                    <strong>{c.by}</strong>
+                    <span className="tag is-rounded">{relativeTime(c.time)}</span>
+                  </p>
 
-                <p dangerouslySetInnerHTML={this.createStoryMarkup(c.text)} className="story-comment-text"></p>
+                  <p dangerouslySetInnerHTML={this.createStoryMarkup(c.text)} className="story-comment-text"></p>
+                </div>
               </div>
-            </div>
           ))}
         </section>
       </div>
+    )
+  }
+
+  render() {
+    const { isFetching } = this.state
+
+    return (
+      <section className="container">
+        { isFetching
+          ? this.renderLoading()
+          : this.renderStory()
+        }
+      </section>
     )
   }
 }

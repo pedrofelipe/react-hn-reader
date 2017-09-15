@@ -26,13 +26,13 @@
   color: var(--orange);
 }
 
-.stories-item-url .tag {
-  margin-left: 0.5rem;
-}
-
 .stories-item-url:hover,
 .stories-item-url:focus {
   color: var(--orange-2);
+}
+
+.stories-item-url .tag {
+  margin-left: 0.5rem;
 }
 
 /* Item Tags */
