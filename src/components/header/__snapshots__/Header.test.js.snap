@@ -8,16 +8,21 @@ exports[`Header renders correctly 1`] = `
     <div
       className="container"
     >
-      <h1
-        className="title is-4 header-title"
+      <a
+        href="/"
+        onClick={[Function]}
       >
-        <span
-          className="header-logo"
+        <h1
+          className="title is-4 header-title"
         >
-          Y
-        </span>
-        Hacker News Reader
-      </h1>
+          <span
+            className="header-logo"
+          >
+            Y
+          </span>
+          Hacker News Reader
+        </h1>
+      </a>
     </div>
   </div>
   <nav
@@ -48,7 +53,7 @@ exports[`Header renders correctly 1`] = `
           <a
             aria-current={false}
             className="header-nav-url"
-            href="new"
+            href="/new"
             onClick={[Function]}
             style={undefined}
           >
@@ -61,7 +66,7 @@ exports[`Header renders correctly 1`] = `
           <a
             aria-current={false}
             className="header-nav-url"
-            href="best"
+            href="/best"
             onClick={[Function]}
             style={undefined}
           >
@@ -74,7 +79,7 @@ exports[`Header renders correctly 1`] = `
           <a
             aria-current={false}
             className="header-nav-url"
-            href="ask"
+            href="/ask"
             onClick={[Function]}
             style={undefined}
           >
@@ -87,7 +92,7 @@ exports[`Header renders correctly 1`] = `
           <a
             aria-current={false}
             className="header-nav-url"
-            href="show"
+            href="/show"
             onClick={[Function]}
             style={undefined}
           >
@@ -100,7 +105,7 @@ exports[`Header renders correctly 1`] = `
           <a
             aria-current={false}
             className="header-nav-url"
-            href="jobs"
+            href="/jobs"
             onClick={[Function]}
             style={undefined}
           >
