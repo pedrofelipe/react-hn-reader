@@ -10,10 +10,6 @@ import { Tag } from '../index'
 import './story.css'
 
 class Story extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentWillMount() {
     const { fetchStory, match } = this.props
 
