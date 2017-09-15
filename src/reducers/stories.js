@@ -1,30 +1,33 @@
 import {
-  REQUEST_STORY_START,
-  REQUEST_STORY_SUCCESS,
-  REQUEST_STORY_FAILURE,
+  REQUEST_STORIES_START,
+  REQUEST_STORIES_SUCCESS,
+  REQUEST_STORIES_FAILURE,
   LOCATION_CHANGED
 } from '../constants'
 
 const initialState = {
-  open: {},
+  list: [],
   isLoading: false,
   hasFailed: false
 }
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case REQUEST_STORY_START:
+    case REQUEST_STORIES_START:
       return {
         ...state,
         isLoading: true
       }
-    case REQUEST_STORY_SUCCESS:
+    case REQUEST_STORIES_SUCCESS:
       return {
         ...state,
-        open: action.payload.data,
+        list: [
+          ...state.list,
+          action.payload.data
+        ],
         isLoading: false
       }
-    case REQUEST_STORY_FAILURE:
+    case REQUEST_STORIES_FAILURE:
       return {
         ...state,
         isLoading: false,
@@ -33,7 +36,7 @@ export default function (state = initialState, action) {
     case LOCATION_CHANGED:
       return {
         ...state,
-        open: {},
+        list: [],
       }
     default:
       return state

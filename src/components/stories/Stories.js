@@ -38,10 +38,10 @@ class Stories extends Component {
     client.get(route)
       .then((response) => {
         const { data } = response
-        const { fetchStory } = this.props
+        const { fetchStories } = this.props
 
         slice(0, 30, data).forEach((storyId) => {
-          fetchStory(storyId)
+          fetchStories(storyId)
         })
       })
   }
@@ -63,12 +63,12 @@ class Stories extends Component {
   }
 
   renderStories() {
-    const { story } = this.props
-    const stories = story.list
+    const { stories } = this.props
+    const storiesList = stories.list
 
     return (
       <ul className="stories-list">
-        {stories.map((s, key) => (
+        {storiesList.map((s, key) => (
           <li className="stories-item" key={key}>
             <Link to={`/item/${s.id}`} className="stories-item-url">
               {s.title}
@@ -111,7 +111,7 @@ class Stories extends Component {
   }
 
   render() {
-    const { story: { isLoading } } = this.props
+    const { stories: { isLoading } } = this.props
 
     return (
       <section className="container">
