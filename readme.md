@@ -61,6 +61,7 @@ hn-reader/
 - [x] Show 1st Level Comments
 
 ## TO-DO
+- [ ] Increase tests coverage to 100%
 - [ ] Show Child Comments
 - [ ] Improve Placeholder Animation
 - [ ] Cache Stories
