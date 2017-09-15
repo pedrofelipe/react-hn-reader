@@ -24,7 +24,6 @@ class Stories extends Component {
     super(props)
 
     this.state = {
-      isFetching: true,
       endpoint: 'topstories'
     }
   }
@@ -45,15 +44,6 @@ class Stories extends Component {
           fetchStory(storyId)
         })
       })
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const { story } = this.props
-    const { isFetching } = prevState
-
-    if((!prevProps.story.isLoading && !story.isLoading) && isFetching) {
-      this.setState({isFetching: false})
-    }
   }
 
   getUrlPath() {
@@ -121,11 +111,11 @@ class Stories extends Component {
   }
 
   render() {
-    const { isFetching } = this.state
+    const { story: { isLoading } } = this.props
 
     return (
       <section className="container">
-        { isFetching
+        { isLoading
           ? this.renderLoading()
           : this.renderStories()
         }

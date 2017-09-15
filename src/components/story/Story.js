@@ -12,10 +12,6 @@ import './story.css'
 class Story extends Component {
   constructor(props) {
     super(props)
-
-    this.state = {
-      isFetching: true
-    }
   }
 
   componentWillMount() {
@@ -26,11 +22,6 @@ class Story extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     const { fetchStoryComments, story } = this.props
-    const { isFetching } = prevState
-
-    if((!prevProps.story.isLoading && !story.isLoading) && isFetching) {
-      this.setState({isFetching: false})
-    }
 
     if (isEmpty(prevProps.story.open) && !isEmpty(story.open)) {
       story.open.kids && story.open.kids.length > 0 &&
@@ -46,8 +37,10 @@ class Story extends Component {
 
   renderLoading() {
     return (
-      <div className="placeholder-list">
-        <Placeholder />
+      <div className="container">
+        <section className="section story">
+          <Placeholder />
+        </section>
       </div>
     )
   }
@@ -127,15 +120,15 @@ class Story extends Component {
   }
 
   render() {
-    const { isFetching } = this.state
+    const { story: { isLoading } } = this.props
 
     return (
-      <section className="container">
-        { isFetching
+      <div>
+        { isLoading
           ? this.renderLoading()
           : this.renderStory()
         }
-      </section>
+      </div>
     )
   }
 }
