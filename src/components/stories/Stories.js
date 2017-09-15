@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 import { client } from '../../index'
 import { slice, repeat } from 'ramda'
 
-import parseDomain from 'parse-domain'
-import moment from 'moment'
+import { getDomain, relativeTime } from '../../decorators/index'
 
 import { Placeholder } from '../index'
+import { Tag } from '../index'
 
 import './stories.css'
 
@@ -64,16 +64,6 @@ class Stories extends Component {
     return paths[0]
   }
 
-  getDomain(url) {
-    const d = parseDomain(url)
-
-    return `${d.domain}.${d.tld}`
-  }
-
-  getRelativeTime(timestamp) {
-    return moment.unix(timestamp).fromNow()
-  }
-
   renderLoading() {
     return (
       <div className="placeholder-list">
@@ -90,45 +80,45 @@ class Stories extends Component {
       <ul className="stories-list">
         {stories.map((s, key) => (
           <li className="stories-item" key={key}>
-            <Link to={`/item/${s.id}`} className="stories-url">
+            <Link to={`/item/${s.id}`} className="stories-item-url">
               {s.title}
 
               {s.url &&
-                <span className="tag is-warning stories-tag-url">
-                  {this.getDomain(s.url)}
-                </span>
+                <Tag
+                  tagValue={s.url}
+                  tagSingle="true"
+                />
               }
             </Link>
 
-            <div>
+            <div className="stories-item-tags">
               {s.score &&
-                <span className="tags has-addons stories-tag-group">
-                  <span className="tag is-dark stories-tag">points</span>
-                  <span className="tag is-light stories-tag">{s.score}</span>
-                </span>
+                <Tag
+                  tagName="points"
+                  tagValue={s.score}
+                />
               }
 
               {s.by &&
-                <span className="tags has-addons stories-tag-group stories-tag-group-author">
-                  <span className="tag is-dark stories-tag">author</span>
-                  <span className="tag is-light stories-tag">{s.by}</span>
-                </span>
+                <Tag
+                  tagName="by"
+                  tagValue={s.by}
+                  tagClass="tags-group-author"
+                />
               }
 
               {s.time &&
-                <span className="tags has-addons stories-tag-group">
-                  <span className="tag is-dark stories-tag">when</span>
-                  <span className="tag is-light stories-tag">{this.getRelativeTime(s.time)}</span>
-                </span>
+                <Tag
+                  tagName="when"
+                  tagValue={s.time}
+                />
               }
 
               {s.descendants &&
-                <span className="tags has-addons stories-tag-group">
-                  <span className="tag is-dark stories-tag">comments</span>
-                  <span className="tag is-light stories-tag">
-                    {s.descendants}
-                  </span>
-                </span>
+                <Tag
+                  tagName="comments"
+                  tagValue={s.descendants}
+                />
               }
             </div>
           </li>

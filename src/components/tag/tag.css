@@ -1,0 +1,47 @@
+/* Tags Group */
+.tags-group {
+  display: inline-flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0.625rem;
+}
+
+.tags-group:last-child,
+.tags-group:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.tags-group:last-child {
+  margin-right: 0;
+}
+
+/* Tag */
+.tag.tags-group-item-url,
+.tags-group .tags-group-item {
+  font-size: 0.6875rem;
+  line-height: 1.1;
+}
+
+.tag.tags-group-item-url {
+  height: 1.25rem;
+}
+
+.tags-group .tags-group-item {
+  height: 1.125rem;
+  margin-bottom: 0;
+}
+
+.tags-group .tags-group-item.is-dark {
+  background-color: var(--brown);
+}
+
+@media screen and (max-width: 767px) {
+  /* Item Tag Group */
+  .tags-group {
+    margin-top: 0.75rem;
+  }
+
+  .tags-group-author {
+    display: none;
+  }
+}

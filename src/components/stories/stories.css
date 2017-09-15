@@ -21,52 +21,20 @@
   border-bottom: none;
 }
 
-/* Item URL */
-.stories-url {
+.stories-item-url {
+  margin-right: 0.5rem;
   font-weight: 500;
   color: var(--orange);
 }
 
-.stories-url:hover,
-.stories-url:focus {
+.stories-item-url:hover,
+.stories-item-url:focus {
   color: var(--orange-2);
 }
 
-/* Item Tag Group */
-.stories-tag-group {
-  display: inline-flex;
-  margin-top: 0.4375rem;
-  margin-right: 0.625rem;
-}
-
-.stories-tag-group:last-child,
-.stories-tag-group:not(:last-child) {
-  margin-bottom: 0.3125rem;
-}
-
-.stories-tag-group:last-child {
-  margin-right: 0;
-}
-
-/* Item Tag */
-.tag.stories-tag-url,
-.stories-tag-group .stories-tag {
-  font-size: 0.6875rem;
-  line-height: 1.1;
-}
-
-.tag.stories-tag-url {
-  height: 1.25rem;
-  margin-left: 0.5rem;
-}
-
-.stories-tag-group .stories-tag {
-  height: 1.125rem;
-  margin-bottom: 0;
-}
-
-.stories-tag-group .stories-tag.is-dark {
-  background-color: var(--brown);
+/* Item Tags */
+.stories-item-tags {
+  margin: 0.4375rem 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -78,19 +46,5 @@
   /* List */
   .stories-list {
     padding: 0.625rem 0;
-  }
-
-  /* Item URL */
-  .stories-url {
-    font-size: 0.875rem;
-  }
-
-  /* Item Tag Group */
-  .stories-tag-group {
-    margin-top: 0.75rem;
-  }
-
-  .stories-tag-group-author {
-    display: none;
   }
 }

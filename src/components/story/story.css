@@ -1,0 +1,12 @@
+.story {
+  padding: 1.5rem 0;
+}
+
+h1.story-title,
+.content h1:not(:first-child) {
+  margin: 0.5em 0;
+}
+
+.story-tags {
+  margin: 0.625rem 0;
+}
