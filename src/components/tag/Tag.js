@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { isEmpty } from 'ramda';
+
 import './tag.css'
 
 class Tag extends Component {
@@ -16,8 +18,10 @@ class Tag extends Component {
   tagGroup() {
     const { tagName, tagValue, tagClass } = this.props
 
+    const tagGroupClass = tagClass && !isEmpty(tagClass) ? tagClass : ''
+
     return (
-      <span className={`tags has-addons tags-group ${tagClass}`}>
+      <span className={`tags has-addons tags-group ${tagGroupClass}`}>
         <span className="tag is-dark tags-group-item">{tagName}</span>
         <span className="tag is-light tags-group-item">{tagValue}</span>
       </span>
